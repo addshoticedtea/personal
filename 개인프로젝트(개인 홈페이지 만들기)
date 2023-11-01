@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CHAEYOON Storyboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f5f5f5;
+            padding: 10px;
+            position: sticky;
+            top: 20px; /* 리모컨이 화면 상단에서 20px 아래에 고정 */
+        }
+
+        .scene {
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            margin-top: 10px;
+        }
+
+        /* 리모컨 버튼 스타일 */
+        .remote-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .remote-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* 페이지 컨테이너 스타일 */
+        .page-container {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        /* 인트로 화면 스타일 */
+        #intro-screen {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f5f5f5;
+            z-index: 9999;
+        }
+
+        #intro-content {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #start-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="intro-screen">
+        <div id="intro-content">
+            <h1>김채윤의 Storyboard</h1>
+            <p>안녕하세요 반갑습니다!!</p>
+            <button id="start-button">시작!</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <!-- 리모컨 버튼 추가 -->
+        <a class="remote-btn" href="#intro">인삿말</a>
+        <a class="remote-btn" href="#scene1">소개</a>
+        <a class="remote-btn" href="#scene2">경험</a>
+        <a class="remote-btn" href="#scene3">배우고 싶은 점</a>
+        <!-- 필요한 만큼 카테고리 버튼 추가 -->
+    </div>
+
+    <div class="page-container">
+        <!-- 인트로 페이지 -->
+        <div id="intro" class="scene">
+            <h2>Intro</h2>
+            <div class="description">
+                <p>안녕하세요! 김채윤의 스토리보드에 오신 것을 환영합니다.</p>
+            </div>
+        </div>
+
+        <!-- Scene 1 -->
+        <div id="scene1" class="scene">
+            <h2>Scene 1</h2>
+            <img src="image1.jpg" alt="Scene 1" width="400">
+            <div class="description">
+                <h3>1. 소개</h3>
+                <ul>
+                    <li>이름 : 김채윤</li>
+                    <li>전공 : 산업경영공학</li>
+                    <li>배운 내용 : 품질관리 이론, 방법론, 데이터 모델링 기법</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scene 2 -->
+        <div id="scene2" class="scene">
+            <h2>Scene 2</h2>
+            <img src="image2.jpg" alt="Scene 2" width="400">
+            <div class="description">
+                <h3>2. 경험</h3>
+                <ul>
+                    <li>프로젝트 이름 : VBA를 활용한 MES 개발</li>
+                    <li>세부 내용 : 생산 데이터 모니터링, 생산 이슈 식별 및 관리</li>
+                    <li>담당 역할 : 제조공정데이터 수집, 파이썬 통한 인공지능 모델 개발, 품질 이슈 식별 및 불량여부 예측</li>
+                    <li>깨달은 점 : 협업과 커뮤니케이션, 프로젝트 일정관리, 인공지능 모델링</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scene 3 -->
+        <div id="scene3" class="scene">
+            <h2>Scene 3</h2>
+            <img src="image3.jpg" alt="Scene 3" width="400">
+            <div class="description">
+                <h3>3. 배우고 싶은 점</h3>
+                <ul>
+                    <li>직무 관련된 기술, 스터디 능력, 인공지능 활용한 품질관리 서비스</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 버튼 클릭 시 인트로 화면 숨기고 스토리보드 내용 보이기
+        document.getElementById('start-button').addEventListener('click', function() {
+            document.getElementById('intro-screen').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
